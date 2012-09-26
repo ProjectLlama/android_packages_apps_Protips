@@ -26,7 +26,7 @@
 
          Example for tip #1:
           _____________________________________________     \_/
-         |                                             |   /._.\
+         |                                             |   /._.\    < AWW :D HES SO CUTE! I WANT ONE!
          |  See all your apps.         [all_apps.png]   > U|   |U
          |  Touch the Launcher icon.                   |   |___|
          |_____________________________________________|    U U
@@ -36,9 +36,9 @@
     <item>See all your apps.\n
     Touch the Launcher icon. @drawable/all_apps</item>
 
-	<!-- Tip: Bitches love Llamas. -->
-	<item>Become one with the Llamas.\n
-	Check out all the custom wallpapers by long pressing the home screen</item>
+    <!-- Tip: Bitches love Llamas. -->
+    <item>Become one with the Llamas.\n
+    Check out all the custom wallpapers by long pressing the home screen</item>
 
     <!-- Tip: Longpress in Launcher (all apps) to drag apps to the home screen. -->
     <item>Drag apps to your Home screen.\n
@@ -57,17 +57,17 @@
     <item>Multiple Home screens.\n
     Swipe left or right to switch. Drag items to other screens.</item>
 
-	<!-- Tip: ROM Control is cool. -->
+	<!-- Tip: AOKP Settings is cool. -->
 	<item>Make Project Llama perfect for you.\n
-	Customize &amp; tweak the look and feel of your device with ROM Control (found in Settings).</item>
+	Customize &amp; tweak the look and feel of your device with AOKP Settings (found in Settings).</item>
 
-	<!-- Tip: Different styles for toggles. -->
+	<!-- Tip: Different styles for toggles. -->like 
 	<item>ICS or Classic toggles.\n
-	Switch between the classic button or ICS style slide toggles in ROM Control -> Toggles -> Toggle Layout</item>
+	Switch between the classic button or ICS style slide toggles in AOKP Settings -> Toggles -> Toggle Layout</item>
 
 	<!-- Tip: Remove the Brightness slider from the notification drawer. -->
 	<item>Fan of autobrightness?\n
-	You can remove the brightness slider from your notification draw in ROM Control ->  Toggles -> Brightness location</item>
+	You can remove the brightness slider from your notification draw in AOKP Settings ->  Toggles -> Brightness location</item>
 
 	<!-- Tip: Statusbar brightness control. -->
 	<item>Statusbar brightness control.\n
@@ -75,7 +75,7 @@
 
 	<!-- Tip: Remove IME switcher. -->
 	<item>Minimalist?\n
-	Remove the keyboard chooser (IME switcher) from your status bar via ROM Control -> General UI -> Show IME Switcher.</item>
+	Remove the keyboard chooser (IME switcher) from your status bar via AOKP Settings -> General UI -> Show IME Switcher.</item>
 
 	<!-- Tip: Remove camera shutter sound. -->
 	<item>Hate that annoying camera click?\n
@@ -83,39 +83,24 @@
 
 	<!-- Tip: Default behavior for settings button in Notification drawer. -->
 	<item>Don\'t like the toggle toggle?\n
-	Restore the default behavior of the Notification drawer Settings button via ROM Control -> Statusbar -> Use default settings behavior.</item>
+	Restore the default behavior of the Notification drawer Settings button via AOKP Settings -> Statusbar -> Use default settings behavior.</item>
 
 	<!-- Tip: Reverse the Notification drawer layout. -->
 	<item>Tiny hands/big phone?\n
-	Move the Notification drawer toggles to the bottom of screen by selecting "Reversed" in ROM Control -> Statusbar -> Notification drawer layout.</item>
+	Move the Notification drawer toggles to the bottom of screen by selecting "Reversed" in AOKP Settings -> Statusbar -> Notification drawer layout.</item>
 
-	<!-- Tip: Remove the Navigation bar while playing games. Credit to orfgator. -->
+	<!-- Tip: Remove the Navigation bar while playing games. -->
 	<item>Use your entire screen.\n
-	Get the full screen experience by turning off the Navigation bar and using Navigation controls in the power menu via ROM Control -> Power menu options -> Show navigation toggles. Then long press and toggle via the power icon.</item>
+	Get the full screen experience by turning off the Navigation bar and using Navigation controls in the power menu via AOKP Settings -> Power menu options -> Show navigation toggles. Then long press and toggle via the power icon.</item>
 
     <!-- Tip: Reminder about how to delete widgets, reinforcing that this
          technique can be used to remove the tips widget iteself. -->
     <item>Done with this widget?\n
     Touch &amp; hold it and when it vibrates, drag it to the Trash icon.</item>
     </string-array>
-    
-    <!-- dial *#*#UNICORN#*#* -->
-    <!-- do not translate -->
-    <!-- Source credit http://www.thejunglestore.com/Unicorns -->
+
     <string-array name="tips2">
-	<item>Does God hate Unicorns?\n
-	Legend states that Noah excluded unicorns from the ark, thereby making them extinct today.</item>
-	
-	<item>Maybe they\'re just delicious.\n
-	There are seven famous Gothic tapestries that depict the hunt and capture of a unicorn.</item>
-
-	<item>A world traveler.\n
-	The Chinese unicorn is called Kilin and takes on many different forms.</item>
-
-	<item>Confusius knows what\'s up.\n
-	A unicorn appeared to Confucius\'s mother, heralding the great Chinese philosopher\'s birth. It later appeared to Confucius, foretelling his death.</item>
-
-	<item>World conquerors love them!\n
-	Alexander the Great boasted he had ridden a unicorn into battle.</item>
+	<item>Text one (short)\n
+	Text two (longerrrrrrrrrrrrrr)</item>
     </string-array>
 </resources>

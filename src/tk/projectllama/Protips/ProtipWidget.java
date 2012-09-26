@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.aokp.aokptips;
+package tk.projectllama.Protips;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -33,14 +33,14 @@ import android.widget.RemoteViews;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/** Mister Widget appears on your home screen to provide helpful tips. */
-public class AOKPtipWidget extends AppWidgetProvider {
+
+public class ProtipWidget extends AppWidgetProvider {
     public static final String ACTION_NEXT_TIP = "com.android.misterwidget.NEXT_TIP";
     public static final String ACTION_POKE = "com.android.misterwidget.HEE_HEE";
 
     public static final String EXTRA_TIMES = "times";
 
-    public static final String PREFS_NAME = "AOKPtips";
+    public static final String PREFS_NAME = "Protips";
     public static final String PREFS_TIP_NUMBER = "widget_tip";
     public static final String PREFS_TIP_SET = "widget_tip_set";
 
@@ -49,13 +49,13 @@ public class AOKPtipWidget extends AppWidgetProvider {
 
     private static Handler mAsyncHandler;
     static {
-        HandlerThread thr = new HandlerThread("AOKPtipWidget async");
+        HandlerThread thr = new HandlerThread("ProtipWidget async");
         thr.start();
         mAsyncHandler = new Handler(thr.getLooper());
     }
 
     // initial appearance: eyes closed, no box
-    private int mIconRes = R.drawable.unicorn;
+    private int mIconRes = R.drawable.llama;
     private int mMessage = 0;
     private int mTipSet = 0;
 
@@ -68,7 +68,7 @@ public class AOKPtipWidget extends AppWidgetProvider {
     private void setup(Context context) {
         mContext = context;
         mWidgetManager = AppWidgetManager.getInstance(context);
-        mWidgetIds = mWidgetManager.getAppWidgetIds(new ComponentName(context, AOKPtipWidget.class));
+        mWidgetIds = mWidgetManager.getAppWidgetIds(new ComponentName(context, ProtipWidget.class));
 
         SharedPreferences pref = context.getSharedPreferences(PREFS_NAME, 0);
         mMessage = pref.getInt(PREFS_TIP_NUMBER, 0);
@@ -86,12 +86,12 @@ public class AOKPtipWidget extends AppWidgetProvider {
     public void goodmorning() {
         mMessage = -1;
         try {
-            setIcon(R.drawable.unicorn);
-            Thread.sleep(500);
+            setIcon(R.drawable.llama);
+            Thread.sleep(500); 
         } catch (InterruptedException ex) {
         }
         mMessage = 0;
-        mIconRes = R.drawable.unicorn;
+        mIconRes = R.drawable.llama;
         refresh();
     }
 
@@ -125,7 +125,7 @@ public class AOKPtipWidget extends AppWidgetProvider {
         } else if (intent.getAction().equals(AppWidgetManager.ACTION_APPWIDGET_ENABLED)) {
             goodmorning();
         } else if (intent.getAction().equals("android.provider.Telephony.SECRET_CODE")) {
-            Log.d("AOKPtips", "ACHIEVEMENT UNLOCKED: Unicorn Wrangler");
+            Log.d("Protips", "ACHIEVEMENT UNLOCKED: Llama Wrangler");
             mTipSet = 1 - mTipSet;
             mMessage = 0;
 
@@ -139,12 +139,12 @@ public class AOKPtipWidget extends AppWidgetProvider {
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     .addCategory(Intent.CATEGORY_HOME));
 
-            final Intent bcast = new Intent(context, AOKPtipWidget.class);
+            final Intent bcast = new Intent(context, ProtipWidget.class);
             bcast.setAction(ACTION_POKE);
             bcast.putExtra(EXTRA_TIMES, 3);
             mContext.sendBroadcast(bcast);
         } else {
-            mIconRes = R.drawable.unicorn;
+            mIconRes = R.drawable.llama;
             refresh();
         }
     }
@@ -169,7 +169,7 @@ public class AOKPtipWidget extends AppWidgetProvider {
         // don't blink if no box showing or if goodmorning() is happening
         if (mMessage < 0) return;
 
-        setIcon(R.drawable.unicorn);
+        setIcon(R.drawable.llama);
     }
 
     public RemoteViews buildUpdate(Context context) {
@@ -177,14 +177,14 @@ public class AOKPtipWidget extends AppWidgetProvider {
             context.getPackageName(), R.layout.widget);
 
         // Action for tap on box
-        Intent bcast = new Intent(context, AOKPtipWidget.class);
+        Intent bcast = new Intent(context, ProtipWidget.class);
         bcast.setAction(ACTION_NEXT_TIP);
         PendingIntent pending = PendingIntent.getBroadcast(
             context, 0, bcast, PendingIntent.FLAG_UPDATE_CURRENT);
         updateViews.setOnClickPendingIntent(R.id.tip_box, pending);
 
         // Action for tap on android
-        bcast = new Intent(context, AOKPtipWidget.class);
+        bcast = new Intent(context, ProtipWidget.class);
         bcast.setAction(ACTION_POKE);
         bcast.putExtra(EXTRA_TIMES, 1);
         pending = PendingIntent.getBroadcast(
