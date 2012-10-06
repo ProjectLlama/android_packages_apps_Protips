@@ -50,7 +50,7 @@
         />
     <ImageView
         android:id="@+id/horny"
-        android:src="@drawable/unicorn"
+        android:src="@drawable/llama"
         android:scaleType="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
