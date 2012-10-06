@@ -15,9 +15,9 @@
 -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true" android:drawable="@drawable/Protip_widget_pressed" />
-    <item android:state_focused="true" android:state_window_focused="true" android:drawable="@drawable/Protip_widget_focused" />
-    <item android:state_focused="true" android:state_window_focused="false" android:drawable="@drawable/Protip_widget_normal" />
-    <item android:drawable="@drawable/Protip_widget_normal" />
+    <item android:state_pressed="true" android:drawable="@drawable/protip_widget_pressed" />
+    <item android:state_focused="true" android:state_window_focused="true" android:drawable="@drawable/protip_widget_focused" />
+    <item android:state_focused="true" android:state_window_focused="false" android:drawable="@drawable/protip_widget_normal" />
+    <item android:drawable="@drawable/protip_widget_normal" />
 </selector>
 
